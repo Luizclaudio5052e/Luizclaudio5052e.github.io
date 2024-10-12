@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" href="/Logo.png"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="theme-color" content="#34C759"/>
+    <meta name="description" content="Faça o download do Launcher do Melhor servidor de Roleplay do SA-MP: Laranjeiras Roleplay!"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.min.css" integrity="sha256-ZCK10swXv9CN059AmZf9UzWpJS34XvilDMJ79K+WOgc=" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.4.0/clipboard.min.js"></script>
+    <title>Lista de Imagens com Barra Lateral</title>
+    <style>
+        body {
+            background-color: #000033; /* Preto azulado */
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .item {
+            margin: 20px;
+            text-align: center;
+        }
+        img {
+            max-width: 260px; /* Tamanho máximo da imagem */
+            height: auto;
+            border-radius: 15px; /* Borda arredondada nas imagens */
+            display: block;
+            margin: 0 auto; /* Centralizar imagem */
+        }
+        a {
+            text-decoration: none; /* Remover sublinhado do link */
+        }
+
+        /* Estilos da barra lateral */
+        .toggle-icon {
+            position: fixed;
+            top: 3px;
+            right: 10px;
+            font-size: 27px;
+            width: 42px;
+            height: 42px;
+            line-height: 45px;
+            text-align: center;
+            cursor: pointer;
+            z-index: 999;
+            color: black;
+            padding: 5px;
+            border: 3px solid white;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 200px; /* Largura padrão da barra lateral */
+            height: 100vh;
+            background-color: #333;
+            border-left: 2px solid #fff;
+            padding: 20px;
+            transform: translateX(200px); /* Oculto */
+            transition: transform 0.5s ease-in-out, width 0.5s ease-in-out;
+            z-index: 1000;
+        }
+        
+        .options {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .options li {
+            padding: 15px;
+            border-bottom: 0px solid #fff;
+            color: #fff;
+            display: flex;
+            align-items: center;
+        }
+        
+        .options li:hover {
+            background-color: #444;
+        }
+
+        .options li i {
+            margin-right: 10px;
+        }
+        
+        .close-icon {
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            font-size: 20px;
+            cursor: pointer;
+            color: #fff;
+            z-index: 1001;
+        }
+        
+        .sidebar-open {
+            transform: translateX(0); /* Mostra a barra lateral */
+            width: 85vw; /* Nova largura quando a barra lateral está aberta */
+        }
+        
+        .botao{
+    	color:red;
+        font-size: 20px;
+         
+        }
+        
+    </style>
+</head>
+<body>
+    <span class="toggle-icon" onclick="toggleSidebar()"><i class="fas fa-bars"></i></span>
+  
+    <div class="sidebar" id="sidebar">
+        <span class="close-icon" onclick="closeSidebar()"><i class="fas fa-times"></i></span>
+        <ul class="options">
+            <li onclick="window.location.href='index.html';"><i class="fas fa-home"></i> Página Inicial</li>
+            <li onclick="window.location.href='catalogo.html';"><i class="fas fa-shopping-cart"></i> Catálogo</li>
+            <li onclick="window.location.href='loja.html';"><i class="fas fa-store"></i> Loja Cash</li>
+        </ul>
+    </div>
+
+    <!-- Lista de imagens com links de redirecionamento -->
+    <div class="botao-container">
+        <div class="item">
+            <img src="img/AERONAVES.png" alt="Aeronaves">
+            <a href="link1" class="botao">Comprar</a>
+        </div>
+        <div class="item">
+            <img src="img/ARMAS.png" alt="Armas">
+            <a href="link2" class="botao">Comprar</a>
+        </div>
+        <div class="item">
+            <img src="img/CRIAREMPRESAS.png" alt="Criar Empresas">
+            <a href="link3" class="botao">Comprar</a>
+        </div>
+        <div class="item">
+            <img src="img/DESBAN.png" alt="Desban">
+            <a href="link4" class="botao">Comprar</a>
+        </div>
+        <div class="item">
+            <img src="img/DINHEIRO.png" alt="Dinheiro">
+            <a href="link5" class="botao">Comprar</a>
+        </div>
+        <div class="item">
+            <img src="img/FAMILIAS.png" alt="Famílias">
+            <a href="link6" class="botao">Comprar</a>
+        </div>
+        <div class="item">
+            <img src="img/NIVEIS.png" alt="Níveis">
+            <a href="link8" class="botao">Comprar</a>
+        </div>
+        <div class="item">
+            <img src="img/OURO.png" alt="VIP Ouro">
+            <a href="link9" class="botao">Comprar</a>
+        </div>
+        <div class="item">
+                        <img src="img/PATROCINADOR.png" alt="Patrocinador">
+            <a href="link10" class="botao">Comprar</a>
+        </div>
+        <div class="item">
+            <img src="img/SAIRPRISAO.png" alt="Sair Prisão">
+            <a href="link11" class="botao">Comprar</a>
+        </div>
+        <div class="item">
+            <img src="img/SOCIO.png" alt="Sócio">
+            <a href="link12" class="botao">Comprar</a>
+        </div>
+        <div class="item">
+            <img src="img/TROCANICK.png" alt="Troca Nick">
+            <a href="link13" class="botao">Comprar</a>
+        </div>
+        <div class="item">
+            <img src="img/VEICULOS.png" alt="Veículos Faeps">
+            <a href="link14" class="botao">Comprar</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.all.min.js" integrity="sha256-IW9RTty6djbi3+dyypxajC14pE6ZrP53DLfY9w40Xn4=" crossorigin="anonymous"></script>
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("sidebar-open");
+        }
+
+        function closeSidebar() {
+            document.getElementById("sidebar").classList.remove("sidebar-open");
+        }
+
+        // Recupera o token da URL e armazena no localStorage, se presente
+        var url = new URL(window.location.href);
+        var params = url.searchParams;
+        var token = params.get("token");
+        if (token) {
+            localStorage.setItem("token", token);
+        }
+    </script>
+</body>
+</html>

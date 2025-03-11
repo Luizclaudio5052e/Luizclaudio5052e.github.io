@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="utf-8"/>
   <link rel="icon" href="/Logo.png"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="theme-color" content="#34C759"/>
   <meta name="description" content="Faça o download do Launcher do Melhor servidor de Roleplay do SA-MP: Laranjeiras Roleplay!"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -34,7 +35,6 @@
       top: 0;
       left: 0;
       width: 100%;
-      max-width: 500px;
       border-radius: 5px;
       white-space: nowrap;
       z-index: 998;
@@ -174,17 +174,46 @@
       font-size: 20px;
     }
     
- .logo {
-  box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.5); /* Efeito neon para a borda preta */
-  position: absolute; /* Torna a imagem posicionada de forma absoluta */
-  top: 66px; /* Distância do topo da página ajustada para 80px */
-  left: 50%; /* Centraliza horizontalmente */
-  transform: translateX(-50%); /* Ajusta a posição para o centro */
-  width: 80px; /* Ajuste o tamanho da imagem conforme necessário */
-  height: 80px; /* Ajuste o tamanho da imagem conforme necessário */
-  z-index: 100; /* Garante que a imagem esteja acima de outros elementos se necessário */
-}
+    .logo {
+      box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.5); /* Efeito neon para a borda preta */
+      position: absolute; /* Torna a imagem posicionada de forma absoluta */
+      top: 66px; /* Distância do topo da página ajustada para 80px */
+      left: 50%; /* Centraliza horizontalmente */
+      transform: translateX(-50%); /* Ajusta a posição para o centro */
+      width: 80px; /* Ajuste o tamanho da imagem conforme necessário */
+      height: 80px; /* Ajuste o tamanho da imagem conforme necessário */
+      z-index: 100; /* Garante que a imagem esteja acima de outros elementos se necessário */
+    }
 
+    /* Media Queries para Responsividade */
+    @media (max-width: 768px) {
+      .botao-link {
+        width: 90%; /* Botões ocupam 90% da largura em telas menores */
+      }
+
+      .sidebar {
+        width: 75%; /* Largura da barra lateral em telas menores */
+      }
+
+      .sidebar-open {
+        width: 100%; /* Largura total quando a barra lateral está aberta */
+      }
+
+      h1 {
+        font-size: 20px; /* Tamanho da fonte menor em telas menores */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        width: 60px; /* Tamanho da logo menor em telas muito pequenas */
+        height: 60px;
+      }
+
+      h1 {
+        font-size: 18px; /* Tamanho da fonte ainda menor */
+      }
+    }
     
   </style>
 </head>
@@ -250,10 +279,10 @@
 </body>
 
 <footer>
-    <div style="background-color: #333; color: white; padding: 1 px; text-align: center; margin-top: 325px;">
+    <div style="background-color: #333; color: white; padding: 1px; text-align: center; margin-top: 325px;">
         <p>&copy; 2024 Laranjeiras Roleplay. Todos os direitos reservados.</p>
-        <p><a href="termos.html" style="color: #bbb;"<a>Termos de Uso</a> | <a href="privacidade.html" style="color: #bbb;">Política de Privacidade</a></p>
-        <p>Contato: <a href="laranjeirasroleplay@gmail.com" style="color: #bbb;">laranjeirasroleplay@gmail.com</a></p>
+        <p><a href="termos.html" style="color: #bbb;">Termos de Uso</a> | <a href="privacidade.html" style="color: #bbb;">Política de Privacidade</a></p>
+                <p>Contato: <a href="laranjeirasroleplay@gmail.com" style="color: #bbb;">laranjeirasroleplay@gmail.com</a></p>
 
         <div>
             <a href="https://www.facebook.com/laranjeirasrp" style="color: #bbb;">Facebook</a> | 
